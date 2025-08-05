@@ -4,11 +4,10 @@ on:
    branches:
      - main
  jobs:
- # CI stage
-   build-stage:
-     name: Build & Test
-     runs-on: ubuntu-latest
-         steps:
+  build-stage:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -20,6 +19,7 @@ on:
 
       - name: Run Test
         run: npm test
+
   # Build and push Docker image to ECR
   docker-build-push:
     name: Build & Push Docker Image
