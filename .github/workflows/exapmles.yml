@@ -16,8 +16,8 @@ on:
      - name: Setup Node.js
        uses: actions/setup-node@v4
      # 3. Install dependencies
-     - name: Install dependencies
-        run: npm Install
+     - name: install dependencies
+        run: npm install
      # 4. Run Test
      - name: Run Test
         run: npm test
