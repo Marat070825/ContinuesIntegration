@@ -8,18 +8,17 @@ on:
    build-stage:
      name: Build & Test
      runs-on: ubuntu-latest
-     steps:
-     # 1. checkout code
-     - name: Checkout Code
-       uses: actions/chekout@v4
-     # 2. Setup Node.js environment
-     - name: Setup Node.js
-       uses: actions/setup-node@v4
-     # 3. Install dependencies
-     - name: install dependencies
+         steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install dependencies
         run: npm install
-     # 4. Run Test
-     - name: Run Test
+
+      - name: Run Test
         run: npm test
   # Build and push Docker image to ECR
   docker-build-push:
